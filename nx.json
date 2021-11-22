@@ -1,0 +1,68 @@
+{
+  "npmScope": "website2021",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "footer": {
+      "tags": []
+    },
+    "footer-e2e": {
+      "tags": [],
+      "implicitDependencies": ["footer"]
+    },
+    "header": {
+      "tags": []
+    },
+    "header-e2e": {
+      "tags": [],
+      "implicitDependencies": ["header"]
+    },
+    "main": {
+      "tags": []
+    },
+    "main-e2e": {
+      "tags": [],
+      "implicitDependencies": ["main"]
+    },
+    "ng-new-website2021": {
+      "tags": []
+    },
+    "ng-new-website2021-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ng-new-website2021"]
+    },
+    "storybook": {
+      "tags": []
+    }
+  }
+}
