@@ -12,7 +12,7 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": [
           "build",
@@ -20,7 +20,8 @@
           "test",
           "e2e",
           "build-storybook"
-        ]
+        ],
+        "accessToken": "OWQ3YjZjNDItZDBlZS00ZTIyLWJjNjEtNzAwZTllOWQxZDQ1fHJlYWQtd3JpdGU="
       }
     }
   },
@@ -38,28 +39,36 @@
     },
     "footer-e2e": {
       "tags": [],
-      "implicitDependencies": ["footer"]
+      "implicitDependencies": [
+        "footer"
+      ]
     },
     "header": {
       "tags": []
     },
     "header-e2e": {
       "tags": [],
-      "implicitDependencies": ["header"]
+      "implicitDependencies": [
+        "header"
+      ]
     },
     "main": {
       "tags": []
     },
     "main-e2e": {
       "tags": [],
-      "implicitDependencies": ["main"]
+      "implicitDependencies": [
+        "main"
+      ]
     },
     "ng-new-website2021": {
       "tags": []
     },
     "ng-new-website2021-e2e": {
       "tags": [],
-      "implicitDependencies": ["ng-new-website2021"]
+      "implicitDependencies": [
+        "ng-new-website2021"
+      ]
     },
     "storybook": {
       "tags": []
